@@ -66,13 +66,13 @@ CreateThread(function()
         })
 
         if blip_data then
-            local sprite, color, shortRange, label in blip_data
+            local sprite, scale, color, shortRange, label in blip_data
             local blip = AddBlipForCoord(pos.x, pos.y, pos.z)
             SetBlipDisplay(blip, 4)
             SetBlipSprite(blip, sprite)
-			SetBlipScale(blip, 1.0)
+	    SetBlipScale(blip, scale)
             SetBlipColour(blip, color)
-			SetBlipAsShortRange(blip, shortRange or false)
+	    SetBlipAsShortRange(blip, shortRange or false)
 
             BeginTextCommandSetBlipName("STRING")
 			AddTextComponentSubstringPlayerName(label)
